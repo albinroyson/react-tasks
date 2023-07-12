@@ -21,7 +21,7 @@ const countries = [
 
 function Dropdown() {
     const [selectedcountry, setSelectedcountry] = useState("");
-    const [selectedcites, setselectedcites] = useState([]);
+    const [selectedcites, setselectedcites] = useState(countries.find((country) => country.value === "IN").cites);
 
     const handlecoutrychange = (e) => {
         const cntryvalue = e.target.value;
